@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Obrigado! - Prime Fit</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Obrigado pelo seu contato! A equipe Prime Fit entrará em contato via WhatsApp para iniciar sua transformação.">
+  <meta name="author" content="Prime Fit">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <!-- Google Ads (Conversão) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-XXXXXXXXX');
+    gtag('event', 'conversion', {'send_to': 'AW-XXXXXXXXX/Conversion_Label'});
+  </script>
+
+  <!-- Fonte especial -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .botoes-obrigado {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      align-items: center;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+    .botoes-obrigado.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Página Obrigado -->
+<section class="obrigado-page animate">
+  <h1>🎉 Obrigado pelo seu contato!</h1>
+  <p>Estamos animados para começar sua transformação com a Prime Fit!<br>Em breve, nossa equipe entrará em contato via WhatsApp.</p>
+  
+  <p class="contador">Você será redirecionado em <span id="tempo">10</span> segundos...</p>
+
+  <div class="botoes-obrigado" id="botoes">
+    <a href="https://wa.me/5521987708652" class="btn-primary pulse">Ir para o WhatsApp Agora</a>
+    <a href="index.html" class="btn-secondary pulse">Voltar para o Início</a>
+  </div>
+</section>
+
+<!-- Rodapé -->
+<footer>
+  <p>&copy; 2025 - Prime Fit</p>
+</footer>
+
+<!-- Scripts -->
+<script>
+  let tempo = 10;
+  const tempoElemento = document.getElementById('tempo');
+
+  const countdown = setInterval(() => {
+    tempo--;
+    tempoElemento.textContent = tempo;
+    if (tempo <= 0) {
+      clearInterval(countdown);
+      window.location.href = "https://wa.me/5521987708652";
+    }
+  }, 1000);
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.animate').forEach(element => {
+    observer.observe(element);
+  });
+
+  const botoes = document.getElementById('botoes');
+  const botoesObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        botoes.classList.add('active');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  botoesObserver.observe(botoes);
+</script>
+
+</body>
+</html>

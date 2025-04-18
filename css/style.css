@@ -1,0 +1,412 @@
+/* Importa fonte especial */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0d0d0d;
+  color: #ffffff;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navbar */
+.navbar {
+  background: #111;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.6);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  width: 150px;
+  height: auto;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.menu .btn-menu {
+  background: #1DB954;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.menu .btn-menu:hover {
+  background: #17a444;
+  transform: scale(1.05);
+}
+
+/* Botão do Menu Mobile */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: #1DB954;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  background: url('../img/hero-home.jpg') center center / cover no-repeat fixed;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-content h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  animation: fadeInDown 1.5s ease;
+}
+
+.hero-content h1 .highlight {
+  background: linear-gradient(90deg, #1DB954, #0a9238);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.hero-content h1 .highlight-secondary {
+  background: linear-gradient(90deg, #FFD700, #FFA500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.hero-content p {
+  margin: 1rem 0;
+  font-size: 1.3rem;
+  color: #dddddd;
+}
+
+/* Botões */
+.btn-primary, .btn-secondary {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease;
+  margin-top: 1.5rem;
+}
+
+.btn-primary {
+  background: #1DB954;
+}
+
+.btn-primary:hover {
+  background: #17a444;
+  transform: scale(1.05);
+}
+
+.btn-primary.pulse {
+  animation: pulse 2s infinite;
+}
+
+.btn-secondary {
+  background: #ff4c4c;
+}
+
+.btn-secondary:hover {
+  background: #e63b3b;
+  transform: scale(1.05);
+}
+
+/* Botões Obrigado */
+.botoes-obrigado {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+.botoes-obrigado.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animações */
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Animações suaves */
+.animate {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+}
+
+.animate.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Sections */
+section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.2rem;
+  color: #1DB954;
+  margin-bottom: 2rem;
+}
+
+/* Text Sections */
+.quem-somos, .about-intro, .mission, .how-we-work, .differentials {
+  background: #1a1a1a;
+  padding: 4rem 2rem;
+  margin-top: 2rem;
+  border-top: 2px solid #1DB954;
+}
+
+.quem-somos p, .about-intro p, .mission p, .how-we-work p, .differentials p, .differentials ul {
+  font-size: 1.2rem;
+  color: #dddddd;
+  max-width: 800px;
+  margin: auto;
+}
+
+.differentials ul {
+  list-style: none;
+  padding: 0;
+}
+
+.differentials ul li {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+}
+
+/* Cards de Planos */
+.plans-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.plan-card {
+  background: #1a1a1a;
+  border: 2px solid #1DB954;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 320px;
+  transition: transform 0.3s ease;
+}
+
+.plan-card:hover {
+  transform: scale(1.05);
+}
+
+.plan-card.highlight {
+  border-color: #FFD700;
+}
+
+.price {
+  font-size: 2rem;
+  color: #1DB954;
+  margin: 1rem 0;
+}
+
+/* Depoimentos */
+.depoimentos-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.depoimento-card {
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 400px;
+  text-align: center;
+  border: 2px solid #FFD700;
+  transition: transform 0.3s ease;
+}
+
+.depoimento-card:hover {
+  transform: scale(1.05);
+}
+
+.depoimento-card p {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.depoimento-card span {
+  display: block;
+  font-weight: bold;
+  color: #1DB954;
+}
+
+/* Formulário */
+.formulario form {
+  max-width: 500px;
+  margin: auto;
+}
+
+.formulario input, .formulario select, .formulario textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: none;
+  background: #1a1a1a;
+  color: #ffffff;
+}
+
+/* Botão WhatsApp Flutuante */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  z-index: 100;
+}
+
+.whatsapp-float img {
+  margin-top: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+/* Página Obrigado */
+.obrigado-page {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.obrigado-page h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #1DB954;
+}
+
+.obrigado-page p {
+  font-size: 1.3rem;
+  color: #dddddd;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .plans-grid, .benefits-grid, .depoimentos-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content h1 .highlight,
+  .hero-content h1 .highlight-secondary {
+    font-size: 2.6rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-top: 1rem;
+  }
+
+  .menu .btn-menu {
+    width: 100%;
+    text-align: center;
+  }
+}

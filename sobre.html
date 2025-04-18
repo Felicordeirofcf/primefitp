@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nossa Equipe - Prime Fit</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Conheça a equipe de Personal Trainers da Prime Fit: treinos personalizados, acompanhamento diário e transformação real para sua vida!">
+  <meta name="keywords" content="personal trainer online, equipe fitness, prime fit, treino personalizado, hipertrofia, emagrecimento, qualidade de vida">
+  <meta name="author" content="Prime Fit">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <!-- Google Ads (Conversão) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-XXXXXXXXX');
+  </script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- MENU -->
+<nav class="navbar fixed-navbar">
+  <div class="navbar-container">
+    <a href="index.html" class="logo">
+      <img src="img/logo.jpg" alt="Prime Fit Logo">
+    </a>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <ul class="menu" id="menu">
+      <li><a class="btn-menu" href="index.html">Início</a></li>
+      <li><a class="btn-menu" href="sobre.html">Nossa Equipe</a></li>
+      <li><a class="btn-menu" href="planos.html">Planos</a></li>
+      <li><a class="btn-menu" href="contato.html">Contato</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero animate" style="background-image: url('img/hero-home.jpg'); background-size: cover; background-position: center;">
+  <div class="hero-content">
+    <h1>
+      <span class="highlight">NOSSA EQUIPE</span><br>
+      <span class="highlight-secondary">JUNTOS NA SUA TRANSFORMAÇÃO</span>
+    </h1>
+    <p>Especialistas dedicados para te acompanhar rumo à sua melhor versão!</p>
+  </div>
+</header>
+
+<!-- SOBRE A EQUIPE -->
+<section class="quem-somos animate">
+  <h2>Quem Somos</h2>
+  <p>Na Prime Fit, nossa missão é transformar vidas através do movimento! Somos um time de Personal Trainers certificados, apaixonados por saúde, performance e qualidade de vida.</p>
+  <p>Trabalhamos com treinos estratégicos, atendimento personalizado e acompanhamento de verdade para resultados duradouros e saudáveis!</p>
+</section>
+
+<!-- NOSSO COMPROMISSO -->
+<section class="benefits animate">
+  <h2>Nosso Compromisso</h2>
+  <p>Cada treino é feito sob medida para você. Acompanhamos sua evolução de perto e ajustamos sua estratégia conforme sua rotina e resultados!</p>
+</section>
+
+<!-- COMO TRABALHAMOS -->
+<section class="how-we-work animate">
+  <h2>Como Atuamos</h2>
+  <p>Você passa por uma avaliação física online e recebe um planejamento exclusivo. Nossa equipe está ao seu lado diariamente via WhatsApp para tirar dúvidas, orientar e motivar!</p>
+</section>
+
+<!-- DIFERENCIAIS -->
+<section class="benefits animate">
+  <h2>Por que Escolher a Prime Fit?</h2>
+  <ul>
+    <li>✅ Avaliação física e planejamento individual</li>
+    <li>✅ Ajustes semanais nos treinos</li>
+    <li>✅ Acompanhamento e suporte diário</li>
+    <li>✅ Profissionais graduados e especializados</li>
+    <li>✅ Resultados reais com método e dedicação</li>
+  </ul>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta animate">
+  <h2>Vamos treinar juntos?</h2>
+  <p>Converse agora com um de nossos especialistas e comece sua transformação com a Prime Fit!</p>
+  <a href="https://wa.me/5521987708652" class="btn-primary pulse" target="_blank">Falar com um Especialista</a>
+</section>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/5521987708652" class="whatsapp-float" target="_blank" aria-label="Fale no WhatsApp">
+  <img src="img/whatsapp-icon.png" alt="WhatsApp">
+</a>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2025 - Prime Fit</p>
+</footer>
+
+<!-- Scripts -->
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.animate').forEach(element => {
+    observer.observe(element);
+  });
+</script>
+
+</body>
+</html>
