@@ -10,22 +10,13 @@
   <meta name="keywords" content="personal trainer online, equipe fitness, prime fit, treino personalizado, hipertrofia, emagrecimento, qualidade de vida">
   <meta name="author" content="Prime Fit">
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G12TPRT8N7"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
-
-  <!-- Google Ads (Conversão) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-XXXXXXXXX');
+    gtag('config', 'G-G12TPRT8N7');
   </script>
 
   <!-- CSS -->
@@ -127,6 +118,17 @@
 
   document.querySelectorAll('.animate').forEach(element => {
     observer.observe(element);
+  });
+
+  // Rastreamento clique no botão WhatsApp
+  const whatsappButtons = document.querySelectorAll('a[href*="wa.me"]');
+  whatsappButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      gtag('event', 'click', {
+        'event_category': 'whatsapp',
+        'event_label': 'Clique no botão WhatsApp'
+      });
+    });
   });
 </script>
 

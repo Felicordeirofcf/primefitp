@@ -3,35 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contato - Prime Fit</title>
+  <title>Planos - Prime Fit</title>
 
   <!-- SEO -->
-  <meta name="description" content="Fale com nossos especialistas da Prime Fit e comece sua transformação fitness com treinos personalizados e suporte diário!">
-  <meta name="keywords" content="contato prime fit, falar com personal trainer, treinos personalizados, suporte online, treino online, consultoria fitness">
+  <meta name="description" content="Escolha o plano ideal para você na Prime Fit! Treinos personalizados, suporte completo e resultados reais. Transforme seu corpo hoje!">
+  <meta name="keywords" content="planos prime fit, consultoria fitness online, personal trainer online, treino personalizado, emagrecimento, hipertrofia">
   <meta name="author" content="Prime Fit">
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G12TPRT8N7"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
-
-  <!-- Google Ads -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-XXXXXXXXX');
-    gtag('event', 'conversion', {'send_to': 'AW-XXXXXXXXX/Conversion_Label'});
+    gtag('config', 'G-G12TPRT8N7');
   </script>
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
 <!-- MENU -->
@@ -54,47 +45,38 @@
 <header class="hero animate" style="background-image: url('img/hero-home.jpg'); background-size: cover; background-position: center;">
   <div class="hero-content">
     <h1>
-      <span class="highlight">FALE CONOSCO</span><br>
-      <span class="highlight-secondary">SEU NOVO CORPO COMEÇA AQUI</span>
+      <span class="highlight">CONSULTORIA ONLINE</span><br>
+      <span class="highlight-secondary">TRANSFORME SEU CORPO ONDE ESTIVER</span>
     </h1>
-    <p>Estamos prontos para te ajudar a conquistar seus objetivos! Preencha o formulário abaixo e nossa equipe vai entrar em contato.</p>
+    <p>Treinos personalizados, suporte diário e resultados reais para você treinar no seu ritmo!</p>
   </div>
 </header>
 
-<!-- FORMULÁRIO DE CONTATO -->
-<section class="formulario animate" id="formulario">
-  <h2>Solicite Seu Treino Personalizado!</h2>
-  <form action="https://formsubmit.co/felipecordeirofcf@gmail.com" method="POST">
-    <input type="text" name="nome" placeholder="Seu Nome" required>
-    <input type="email" name="email" placeholder="Seu E-mail" required>
-    <input type="text" name="whatsapp" placeholder="Seu WhatsApp com DDD" required>
-
-    <select name="objetivo" required>
-      <option value="">Qual seu principal objetivo?</option>
-      <option value="Hipertrofia">Ganhar Massa Muscular</option>
-      <option value="Emagrecimento">Perder Peso</option>
-      <option value="Condicionamento">Melhorar Condicionamento</option>
-      <option value="Saúde">Saúde e Bem-estar</option>
-    </select>
-
-    <textarea name="mensagem" placeholder="Conte um pouco sobre você (opcional)" rows="4"></textarea>
-
-    <input type="hidden" name="_next" value="https://wa.me/5521987708652">
-    <input type="hidden" name="_captcha" value="false">
-
-    <button type="submit" class="btn-primary pulse">Enviar e Começar Agora</button>
-  </form>
+<!-- PLANO CONSULTORIA ONLINE -->
+<section class="plans-grid animate">
+  <div class="plan-card">
+    <h2>🏋️‍♂️ Consultoria Online</h2>
+    <p class="price"><strong>A partir de R$50/mês</strong></p>
+    <ul>
+      <li>✅ Treinos 100% personalizados</li>
+      <li>✅ Ajustes semanais conforme sua evolução</li>
+      <li>✅ Suporte diário e orientação via WhatsApp</li>
+      <li>✅ Treine em casa, na academia ou ao ar livre</li>
+      <li>✅ Acesso fácil e acompanhamento profissional</li>
+    </ul>
+    <a href="https://wa.me/5521987708652?text=Olá%2C+quero+começar+meu+treino+personalizado%21" class="btn-primary pulse" target="_blank">Quero Meu Treino Online</a>
+  </div>
 </section>
 
 <!-- CTA FINAL -->
 <section class="cta animate">
-  <h2>Preferência para atendimento rápido?</h2>
-  <p>Fale diretamente conosco via WhatsApp e comece sua transformação com a Prime Fit!</p>
-  <a href="https://wa.me/5521987708652" class="btn-primary pulse" target="_blank">Chamar no WhatsApp</a>
+  <h2>Vamos iniciar sua transformação agora?</h2>
+  <p>Fale com a Prime Fit e receba seu plano de treino personalizado ainda hoje!</p>
+  <a href="https://wa.me/5521987708652?text=Olá%2C+quero+começar+meu+treino+personalizado%21" class="btn-primary pulse" target="_blank">Falar com um Especialista</a>
 </section>
 
-<!-- BOTÃO FLUTUANTE WHATSAPP -->
-<a href="https://wa.me/5521987708652" class="whatsapp-float" target="_blank" aria-label="Fale no WhatsApp">
+<!-- BOTÃO WHATSAPP FLUTUANTE -->
+<a href="https://wa.me/5521987708652?text=Olá%2C+quero+começar+meu+treino+personalizado%21" class="whatsapp-float" target="_blank" aria-label="Fale no WhatsApp">
   <img src="img/whatsapp-icon.png" alt="WhatsApp">
 </a>
 
@@ -121,6 +103,17 @@
 
   document.querySelectorAll('.animate').forEach(element => {
     observer.observe(element);
+  });
+
+  // Rastreamento de clique no WhatsApp
+  const whatsappButtons = document.querySelectorAll('a[href*="wa.me"]');
+  whatsappButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      gtag('event', 'click', {
+        'event_category': 'whatsapp',
+        'event_label': 'Clique no botão WhatsApp - Planos'
+      });
+    });
   });
 </script>
 

@@ -9,23 +9,13 @@
   <meta name="description" content="Obrigado pelo seu contato! A equipe Prime Fit entrará em contato via WhatsApp para iniciar sua transformação.">
   <meta name="author" content="Prime Fit">
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G12TPRT8N7"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
-
-  <!-- Google Ads (Conversão) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-XXXXXXXXX');
-    gtag('event', 'conversion', {'send_to': 'AW-XXXXXXXXX/Conversion_Label'});
+    gtag('config', 'G-G12TPRT8N7');
   </script>
 
   <!-- Fonte especial -->
@@ -60,7 +50,7 @@
   <p class="contador">Você será redirecionado em <span id="tempo">10</span> segundos...</p>
 
   <div class="botoes-obrigado" id="botoes">
-    <a href="https://wa.me/5521987708652" class="btn-primary pulse">Ir para o WhatsApp Agora</a>
+    <a href="https://wa.me/5521987708652" class="btn-primary pulse" target="_blank">Ir para o WhatsApp Agora</a>
     <a href="index.html" class="btn-secondary pulse">Voltar para o Início</a>
   </div>
 </section>
@@ -72,6 +62,7 @@
 
 <!-- Scripts -->
 <script>
+  // Contador de redirecionamento
   let tempo = 10;
   const tempoElemento = document.getElementById('tempo');
 
@@ -84,6 +75,7 @@
     }
   }, 1000);
 
+  // Animações suaves
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -96,6 +88,7 @@
     observer.observe(element);
   });
 
+  // Animação para os botões
   const botoes = document.getElementById('botoes');
   const botoesObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {

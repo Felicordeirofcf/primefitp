@@ -18,21 +18,12 @@
   <meta property="og:url" content="https://seusite.com.br/">
 
   <!-- Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G12TPRT8N7"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
-
-  <!-- Google Ads Conversion -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-XXXXXXXXX');
+    gtag('config', 'G-G12TPRT8N7');
   </script>
 
   <!-- Fonts and CSS -->
@@ -82,7 +73,7 @@
   <h2>Benefícios Exclusivos</h2>
   <div class="benefits-grid">
     <div class="benefit-card">
-      <h3>🗕️ Treinos Atualizados</h3>
+      <h3>📅 Treinos Atualizados</h3>
       <p>Programas adaptados semanalmente para sua evolução contínua.</p>
     </div>
     <div class="benefit-card">
@@ -168,6 +159,17 @@
     const hero = document.getElementById('hero');
     let scrollPosition = window.pageYOffset;
     hero.style.backgroundPositionY = scrollPosition * 0.5 + "px";
+  });
+
+  // Rastreamento clique no botão WhatsApp
+  const whatsappButtons = document.querySelectorAll('a[href*="wa.me"]');
+  whatsappButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      gtag('event', 'click', {
+        'event_category': 'whatsapp',
+        'event_label': 'Clique no botão WhatsApp'
+      });
+    });
   });
 </script>
 
