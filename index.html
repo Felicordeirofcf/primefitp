@@ -26,6 +26,22 @@
     gtag('config', 'G-G12TPRT8N7');
   </script>
 
+  <!-- Google Ads Conversion Snippet -->
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-11482096216/DKX3CKHSlboaENjEi-Mq',
+          'event_callback': callback
+      });
+      return false;
+    }
+  </script>
+
   <!-- Fonts and CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
@@ -58,7 +74,11 @@
       <span class="highlight">TRANSFORMAÇÃO DE VERDADE!</span>
     </h1>
     <p>Treinos personalizados e suporte diário para você conquistar o melhor shape da sua vida.</p>
-    <a href="https://wa.me/5521987708652?text=Olá%2C+gostaria+de+receber+meu+treino+personalizado%21" class="btn-primary pulse" target="_blank">Falar com um Especialista</a>
+    <a href="https://wa.me/5521987708652?text=Olá%2C+gostaria+de+receber+meu+treino+personalizado%21" 
+       class="btn-primary pulse" target="_blank" 
+       onclick="return gtag_report_conversion('https://wa.me/5521987708652?text=Olá%2C+gostaria+de+receber+meu+treino+personalizado%21');">
+      Falar com um Especialista
+    </a>
   </div>
 </header>
 
@@ -117,11 +137,17 @@
 <section class="cta animate">
   <h2>Quer ser o próximo caso de sucesso?</h2>
   <p>Solicite agora seu treino personalizado e comece a transformação que você merece!</p>
-  <a href="https://wa.me/5521987708652?text=Olá%2C+gostaria+de+receber+meu+treino+personalizado%21" class="btn-primary pulse" target="_blank">Falar com um Especialista</a>
+  <a href="https://wa.me/5521987708652?text=Olá%2C+gostaria+de+receber+meu+treino+personalizado%21" 
+     class="btn-primary pulse" target="_blank" 
+     onclick="return gtag_report_conversion('https://wa.me/5521987708652?text=Olá%2C+gostaria+de+receber+meu+treino+personalizado%21');">
+    Falar com um Especialista
+  </a>
 </section>
 
 <!-- WHATSAPP FLOAT -->
-<a href="https://wa.me/5521987708652?text=Olá%2C+gostaria+de+receber+meu+treino+personalizado%21" class="whatsapp-float" id="whatsapp-float" target="_blank" aria-label="Fale no WhatsApp">
+<a href="https://wa.me/5521987708652?text=Olá%2C+gostaria+de+receber+meu+treino+personalizado%21" 
+   class="whatsapp-float" id="whatsapp-float" target="_blank" aria-label="Fale no WhatsApp"
+   onclick="return gtag_report_conversion('https://wa.me/5521987708652?text=Olá%2C+gostaria+de+receber+meu+treino+personalizado%21');">
   <img src="img/whatsapp-icon.png" alt="WhatsApp">
 </a>
 
@@ -159,17 +185,6 @@
     const hero = document.getElementById('hero');
     let scrollPosition = window.pageYOffset;
     hero.style.backgroundPositionY = scrollPosition * 0.5 + "px";
-  });
-
-  // Rastreamento clique no botão WhatsApp
-  const whatsappButtons = document.querySelectorAll('a[href*="wa.me"]');
-  whatsappButtons.forEach(button => {
-    button.addEventListener('click', function() {
-      gtag('event', 'click', {
-        'event_category': 'whatsapp',
-        'event_label': 'Clique no botão WhatsApp'
-      });
-    });
   });
 </script>
 

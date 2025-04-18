@@ -19,6 +19,22 @@
     gtag('config', 'G-G12TPRT8N7');
   </script>
 
+  <!-- Google Ads Conversion Event Snippet -->
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-11482096216/DKX3CKHSlboaENjEi-Mq',
+          'event_callback': callback
+      });
+      return false;
+    }
+  </script>
+
   <!-- Fonts and CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
@@ -56,7 +72,7 @@
 <!-- FORMULÁRIO DE CONTATO -->
 <section class="formulario animate" id="formulario">
   <h2>Solicite Seu Treino Personalizado!</h2>
-  <form action="https://formsubmit.co/felipecordeirofcf@gmail.com" method="POST">
+  <form action="https://formsubmit.co/felipecordeirofcf@gmail.com" method="POST" onsubmit="gtag_report_conversion();">
     <input type="text" name="nome" placeholder="Seu Nome" required>
     <input type="email" name="email" placeholder="Seu E-mail" required>
     <input type="text" name="whatsapp" placeholder="Seu WhatsApp com DDD" required>
@@ -78,30 +94,17 @@
   </form>
 </section>
 
-<!-- Rastreamento de Conversão no envio do formulário -->
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const form = document.querySelector("form");
-    if (form) {
-      form.addEventListener("submit", function() {
-        gtag('event', 'conversion', {
-          'event_category': 'formulario',
-          'event_label': 'Envio Formulário Contato - Prime Fit'
-        });
-      });
-    }
-  });
-</script>
-
 <!-- CTA FINAL -->
 <section class="cta animate">
   <h2>Preferência para atendimento rápido?</h2>
   <p>Fale diretamente conosco via WhatsApp e comece sua transformação com a Prime Fit!</p>
-  <a href="https://wa.me/5521987708652" class="btn-primary pulse" target="_blank">Chamar no WhatsApp</a>
+  <a href="https://wa.me/5521987708652" class="btn-primary pulse" target="_blank" onclick="return gtag_report_conversion('https://wa.me/5521987708652');">
+    Chamar no WhatsApp
+  </a>
 </section>
 
-<!-- BOTÃO FLUTUANTE WHATSAPP -->
-<a href="https://wa.me/5521987708652" class="whatsapp-float" target="_blank" aria-label="Fale no WhatsApp">
+<!-- BOTÃO WHATSAPP FLUTUANTE -->
+<a href="https://wa.me/5521987708652" class="whatsapp-float" target="_blank" aria-label="Fale no WhatsApp" onclick="return gtag_report_conversion('https://wa.me/5521987708652');">
   <img src="img/whatsapp-icon.png" alt="WhatsApp">
 </a>
 
@@ -128,17 +131,6 @@
 
   document.querySelectorAll('.animate').forEach(element => {
     observer.observe(element);
-  });
-
-  // Rastreamento de cliques no botão WhatsApp
-  const whatsappButtons = document.querySelectorAll('a[href*="wa.me"]');
-  whatsappButtons.forEach(button => {
-    button.addEventListener('click', function() {
-      gtag('event', 'click', {
-        'event_category': 'whatsapp',
-        'event_label': 'Clique no botão WhatsApp - Contato'
-      });
-    });
   });
 </script>
 

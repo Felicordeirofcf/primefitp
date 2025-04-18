@@ -19,6 +19,22 @@
     gtag('config', 'G-G12TPRT8N7');
   </script>
 
+  <!-- Google Ads Conversion Snippet -->
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-11482096216/DKX3CKHSlboaENjEi-Mq',
+          'event_callback': callback
+      });
+      return false;
+    }
+  </script>
+
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -87,11 +103,18 @@
 <section class="cta animate">
   <h2>Vamos treinar juntos?</h2>
   <p>Converse agora com um de nossos especialistas e comece sua transformação com a Prime Fit!</p>
-  <a href="https://wa.me/5521987708652" class="btn-primary pulse" target="_blank">Falar com um Especialista</a>
+  <a href="https://wa.me/5521987708652" 
+     class="btn-primary pulse" target="_blank" 
+     onclick="return gtag_report_conversion('https://wa.me/5521987708652');">
+    Falar com um Especialista
+  </a>
 </section>
 
 <!-- WHATSAPP FLOAT -->
-<a href="https://wa.me/5521987708652" class="whatsapp-float" target="_blank" aria-label="Fale no WhatsApp">
+<a href="https://wa.me/5521987708652" 
+   class="whatsapp-float" target="_blank" 
+   aria-label="Fale no WhatsApp"
+   onclick="return gtag_report_conversion('https://wa.me/5521987708652');">
   <img src="img/whatsapp-icon.png" alt="WhatsApp">
 </a>
 
@@ -118,17 +141,6 @@
 
   document.querySelectorAll('.animate').forEach(element => {
     observer.observe(element);
-  });
-
-  // Rastreamento clique no botão WhatsApp
-  const whatsappButtons = document.querySelectorAll('a[href*="wa.me"]');
-  whatsappButtons.forEach(button => {
-    button.addEventListener('click', function() {
-      gtag('event', 'click', {
-        'event_category': 'whatsapp',
-        'event_label': 'Clique no botão WhatsApp'
-      });
-    });
   });
 </script>
 
