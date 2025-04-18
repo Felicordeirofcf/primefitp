@@ -19,7 +19,7 @@
     gtag('config', 'G-G12TPRT8N7');
   </script>
 
-  <!-- Google Ads Conversion Event Snippet -->
+  <!-- Google Ads Conversion -->
   <script>
     function gtag_report_conversion(url) {
       var callback = function () {
@@ -35,7 +35,7 @@
     }
   </script>
 
-  <!-- Fonts and CSS -->
+  <!-- CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -72,7 +72,7 @@
 <!-- FORMULÁRIO DE CONTATO -->
 <section class="formulario animate" id="formulario">
   <h2>Solicite Seu Treino Personalizado!</h2>
-  <form action="https://formsubmit.co/felipecordeirofcf@gmail.com" method="POST" onsubmit="gtag_report_conversion();">
+  <form action="obrigado.html" method="POST" onsubmit="gtag_report_conversion();">
     <input type="text" name="nome" placeholder="Seu Nome" required>
     <input type="email" name="email" placeholder="Seu E-mail" required>
     <input type="text" name="whatsapp" placeholder="Seu WhatsApp com DDD" required>
@@ -86,9 +86,6 @@
     </select>
 
     <textarea name="mensagem" placeholder="Conte um pouco sobre você (opcional)" rows="4"></textarea>
-
-    <input type="hidden" name="_next" value="https://wa.me/5521987708652">
-    <input type="hidden" name="_captcha" value="false">
 
     <button type="submit" class="btn-primary pulse">Enviar e Começar Agora</button>
   </form>
