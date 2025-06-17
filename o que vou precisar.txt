@@ -1,0 +1,10 @@
+Visual Studio Code - Editor de código principal
+Git - Controle de versão
+Node.js - Ambiente de execução JavaScript
+Docker - Containerização para desenvolvimento e implantação
+PostgreSQL - Banco de dados relacional
+MongoDB - Banco de dados NoSQL (para dados não estruturados)
+Postman - Teste de APIs
+Figma ou Adobe XD - Design de interface
+Python com bibliotecas como Pandas, NumPy e scikit-learn para análise de dados
+Jupyter Notebook - Prototipagem de análises de dados
