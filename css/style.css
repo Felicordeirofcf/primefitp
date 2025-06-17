@@ -41,7 +41,7 @@ a {
 }
 
 .logo img {
-  width: 150px;
+  width: 100px;
   height: auto;
 }
 
@@ -54,10 +54,10 @@ a {
 .menu .btn-menu {
   background: #1DB954;
   color: #ffffff;
-  padding: 0.5rem 1rem;
+  padding: 0.3rem 0.8rem;
   border-radius: 8px;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   transition: background 0.3s ease, transform 0.3s ease;
 }
 
@@ -205,7 +205,7 @@ h2 {
 }
 
 /* Text Sections */
-.quem-somos, .about-intro, .mission, .how-we-work, .differentials {
+.quem-somos, .about-intro, .mission, .how-we-work, .differentials, .benefits {
   background: #1a1a1a;
   padding: 4rem 2rem;
   margin-top: 2rem;
@@ -226,7 +226,42 @@ h2 {
 
 .differentials ul li {
   margin: 1rem 0;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
+}
+
+/* Benefícios */
+.benefits-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.benefit-card {
+  background: #0d0d0d;
+  border: 2px solid #1DB954;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 320px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(29, 185, 84, 0.2);
+}
+
+.benefit-card h3 {
+  color: #1DB954;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.benefit-card p {
+  color: #dddddd;
+  line-height: 1.6;
 }
 
 /* Cards de Planos */
@@ -383,17 +418,32 @@ footer {
     font-size: 1rem;
   }
 
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+
   .navbar-container {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo img {
+    width: 80px;
   }
 
   .menu {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #111;
     flex-direction: column;
     width: 100%;
-    margin-top: 1rem;
-    gap: 1rem;
+    padding: 1rem;
+    gap: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.6);
   }
 
   .menu.active {
@@ -402,11 +452,29 @@ footer {
 
   .menu-toggle {
     display: block;
-    margin-top: 1rem;
+    position: relative;
   }
 
   .menu .btn-menu {
     width: 100%;
     text-align: center;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+  }
+
+  .benefits-grid {
+    gap: 1rem;
+  }
+
+  .benefit-card {
+    padding: 1.5rem;
+  }
+
+  section {
+    padding: 2rem 1rem;
+  }
+
+  .formulario form {
+    padding: 0 1rem;
   }
 }
